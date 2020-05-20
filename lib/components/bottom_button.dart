@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import '../constants.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.buttonTitle, @required this.onTap});
@@ -19,8 +19,8 @@ class BottomButton extends StatelessWidget {
           ),
         ),
         color: kBottomContainerColour,
-        //margin: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
-        //padding: EdgeInsets.only(bottom: 20.0),
+        margin: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+//        padding: EdgeInsets.only(bottom: 20.0),
         width: double.infinity,
         height: kBottomContainerHeight,
       ),
