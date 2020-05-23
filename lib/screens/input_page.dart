@@ -9,7 +9,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/bottom_button.dart';
 import '../calculator_brain.dart';
 import 'results_page.dart';
-import 'package:bmi_calculator/utilities.dart';
 
 enum Gender {
   male,
@@ -24,8 +23,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
-  int weight = 40;
-  int age = 15;
+  int weight = 80;
+  int age = 28;
 
   @override
   Widget build(BuildContext context) {
@@ -225,7 +224,6 @@ class _InputPageState extends State<InputPage> {
                   height: height,
                   weight: weight,
                 );
-
                 Navigator.push(
                   context,
                   MaterialPageRoute(
