@@ -1,13 +1,15 @@
 import 'package:bmi_calculator/components/round_icon_button.dart';
+import 'package:bmi_calculator/size_config.dart';
+import 'package:bmi_calculator/utilities.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../components/icon_content.dart';
 import '../components/reusable_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../constants.dart';
 import '../components/bottom_button.dart';
 import '../calculator_brain.dart';
 import 'results_page.dart';
+import 'package:bmi_calculator/utilities.dart';
 
 enum Gender {
   male,
@@ -27,10 +29,14 @@ class _InputPageState extends State<InputPage> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('BMI CALCULATOR'),
+          title: Text(
+            'BMI CALCULATOR',
+            style: Utilities.appBarTitle,
+          ),
           centerTitle: true,
         ),
         body: Column(
@@ -78,11 +84,11 @@ class _InputPageState extends State<InputPage> {
               child: ReusableCard(
                 colour: kActiveCardColour,
                 cardChild: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Text(
                       'HEIGHT',
-                      style: kLabelTextStyle,
+                      style: Utilities.labelTextStyle,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -91,21 +97,22 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           height.toString(),
-                          style: kNumberTextStyle,
+                          style: Utilities.numberTextStyle,
                         ),
                         Text(
-                          'cm',
-                          style: kLabelTextStyle,
+                          ' cm',
+                          style: Utilities.labelTextStyle,
                         ),
                       ],
                     ),
                     SliderTheme(
                       data: SliderTheme.of(context).copyWith(
                         thumbShape: RoundSliderThumbShape(
-                          enabledThumbRadius: 15.0,
+                          enabledThumbRadius:
+                              SizeConfig.safeBlockHorizontal * 3,
                         ),
                         overlayShape: RoundSliderOverlayShape(
-                          overlayRadius: 30.0,
+                          overlayRadius: SizeConfig.safeBlockHorizontal * 5,
                         ),
                         thumbColor: kBottomContainerColour,
                         overlayColor: kAlphaBottomContainerColour,
@@ -138,11 +145,11 @@ class _InputPageState extends State<InputPage> {
                         children: <Widget>[
                           Text(
                             'WEIGHT',
-                            style: kLabelTextStyle,
+                            style: Utilities.labelTextStyle,
                           ),
                           Text(
                             weight.toString(),
-                            style: kNumberTextStyle,
+                            style: Utilities.numberTextStyle,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -177,11 +184,11 @@ class _InputPageState extends State<InputPage> {
                         children: <Widget>[
                           Text(
                             'AGE',
-                            style: kLabelTextStyle,
+                            style: Utilities.labelTextStyle,
                           ),
                           Text(
                             age.toString(),
-                            style: kNumberTextStyle,
+                            style: Utilities.numberTextStyle,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

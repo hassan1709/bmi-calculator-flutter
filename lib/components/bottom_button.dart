@@ -1,5 +1,6 @@
+import 'package:bmi_calculator/size_config.dart';
+import 'package:bmi_calculator/utilities.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.buttonTitle, @required this.onTap});
@@ -15,14 +16,14 @@ class BottomButton extends StatelessWidget {
         child: Center(
           child: Text(
             buttonTitle,
-            style: kLargeButtonTextStyle,
+            style: Utilities.largeButtonTextStyle,
           ),
         ),
         color: kBottomContainerColour,
         margin: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
 //        padding: EdgeInsets.only(bottom: 20.0),
         width: double.infinity,
-        height: kBottomContainerHeight,
+        height: Utilities.bottomContainerHeight,
       ),
     );
   }

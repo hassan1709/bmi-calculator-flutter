@@ -1,5 +1,6 @@
+import 'package:bmi_calculator/size_config.dart';
+import 'package:bmi_calculator/utilities.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
 class RoundIconButton extends StatelessWidget {
   RoundIconButton({@required this.icon, @required this.onPressed});
@@ -14,8 +15,10 @@ class RoundIconButton extends StatelessWidget {
       onPressed: onPressed,
       elevation: 0.0,
       constraints: BoxConstraints.tightFor(
-        width: 56.0,
-        height: 56.0,
+//        width: 56.0,
+//        height: 56.0,
+        width: SizeConfig.safeBlockHorizontal * 15,
+        height: SizeConfig.safeBlockHorizontal * 15,
       ),
       shape: CircleBorder(),
       fillColor: kRoundedIconButtonColour,

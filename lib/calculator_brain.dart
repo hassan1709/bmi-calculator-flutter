@@ -27,7 +27,7 @@ class CalculatorBrain {
     } else {
       _result = 'Underweight';
       _interpretation =
-          'Your a lower than normal body weight. You can ear a bit more.';
+          'Your a lower than normal body weight. You can eat a bit more.';
     }
   }
 

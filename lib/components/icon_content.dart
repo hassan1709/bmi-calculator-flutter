@@ -1,5 +1,6 @@
+import 'package:bmi_calculator/size_config.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import '../utilities.dart';
 
 class IconContent extends StatelessWidget {
   IconContent({
@@ -13,18 +14,19 @@ class IconContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Icon(
           iconData,
-          size: 80.0,
+          //size: 80.0,
+          size: SizeConfig.safeBlockHorizontal * 20,
         ),
-        SizedBox(
-          height: 15.0,
-        ),
+//        SizedBox(
+//          height: 15.0,
+//        ),
         Text(
           label,
-          style: kLabelTextStyle,
+          style: Utilities.labelTextStyle,
         ),
       ],
     );
