@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # BMI Calculator 💪
 
 ## My Goal
@@ -25,9 +23,3 @@ We’re going to make a Body Mass Index Calculator inspired by the beautiful des
 - Understand Dart Enums and the Ternary Operator.
 - Learn about composition vs. inheritance and the Flutter way of creating custom UI.
 - Understand the difference between const and final in Dart and when to use each.
-
-
-=======
-# bmi-calculator-flutter
-BMI Calculator Flutter
->>>>>>> dc61bd7d1e78700ebd0ec860a1d28140bbcec72c
